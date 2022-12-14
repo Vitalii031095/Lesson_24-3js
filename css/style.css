@@ -1,0 +1,19 @@
+.list {
+   background-color: rebeccapurple;
+   display: flex;
+   gap: 15px;
+}
+
+.list__item {
+   height: 80px;
+   width: 50px;
+   background-color: rgb(238, 216, 16);
+}
+
+.column {
+   margin-left: 105px;
+   width: 70px;
+   height: 70px;
+   background-color: brown;
+   border-radius: 50%;
+}

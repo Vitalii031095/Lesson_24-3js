@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Lesson_24</title>
+   <link rel="stylesheet" href="css/style.css">
+   
+</head>
+<body>
+   <ul class="list">
+      <li class="list__item">1</li>
+      <li class="list__item">2</li>
+      <li class="list__item">3</li>
+      <li class="list__item">4</li>
+      <li class="list__item">5</li>
+      <li class="list__item">6</li>
+      <li class="list__item">7</li>
+      <li class="list__item">8</li>
+   </ul>
+
+
+
+   <h2>Відео 1 (функції)</h2>
+   <b>Задача №1 </b> <br>
+    Кто попадет в консоль первым Вася или Коля?<br>
+   function showName() {<br>
+      console.log('Вася!');<br>
+   }<br>
+   setTimeout(showName, 0);<br>
+   console.log('Коля!');<br>
+   <mark>Коля!</mark> <br>
+   <b>Задача №2 </b> <br>
+   Верно ли вызвана функция<br>
+showMessage();<br>
+function showMessage() {<br>
+	console.log('Сообщение');<br>
+   <mark>Так правельно</mark> <br>
+
+   <b>Задача №3 </b> <br>
+   Верно ли вызвана функция
+   showMessage();<br>
+   let showMessage = function () {<br>
+      console.log('Сообщение');<br>
+      <mark>Ні, так як це функціональний вираз</mark> <br>
+
+       <b>Задача №4</b>
+    Как решить проблему?</b>
+      'use strict'</br>
+      if (2 > 1) {</br>
+         function showMessage() {</br>
+            console.log('Сообщение');</br>
+         }
+      }
+      showMessage(); // Error (showMessage is not defined)</br>
+      
+      <mark>'use strict' <br>
+         let showMessage;<br>
+         if (2 > 1) {<br>
+            showMessage = function() {<br>
+               console.log('Сообщение');<br>
+            }
+         }</mark>
+
+         <h2>Відео 2 (масиви)</h2>
+          <b>Задача №1.</b>
+          Какое число (длинну) мы получим?
+         let arr = ['Ваня', 'Иштван', 'Оля',];
+         let newArr = arr;
+         newArr.push('Петя');
+         console.log(arr.length); <br>
+        <mark>4</mark><br>
+        <b>Задача №2.</b>
+        Создайте массив users с элементами "Ваня" и "Иштван".
+        Добавьте "Оля" в конец.
+        Замените значение в "Иштван" на "Петя".
+        Ваш код для поиска значения должен
+        работать для массивов с любой длиной.
+        Удалите первый элемент массива и покажите его.
+        Вставьте "Маша" и "Паша" в начало массива.
+        <mark>
+         let users = ["Ваня", "Иштван",];<br>
+users[1] = "Петя";<br>
+console.log(users);<br>
+let deletes = users.shift();<br>
+console.log(deletes);<br>
+users.splice(0, 0, "Маша","Паша");<br>
+console.log(users);<br>
+        </mark> <br>
+        <b>Задача №3.</b> <br>
+     <b>
+         Удалить элемент 'Иштван' и возвратить его в переменную
+           let arr = ['Ваня', 'Иштван', 'Оля',];
+     </b> <br>
+     let delElement = arr.splice(1,1); <br>
+     <b>Задача №4</b>. <br>
+Сделать из строки массив
+let str = 'Ваня,Иштван,Оля';
+<mark> 
+   let arr = ['Ваня', 'Иштван', 'Оля',]; <br>
+let delElement = arr.splice(1,1); <br>
+console.log(delElement) <br>
+</mark> <br>
+<b>Задача №5. <br>
+Чему равен previousValue в начале работы метода?</b>
+let arr = [9, 2, 8,];
+let reduceValue = arrTwo.reduce(function (previousValue, item, index, array) {
+	console.log(previousValue);
+});
+ <mark>9</mark> 
+ <h2>Відео 3 (DOM+)</h2>
+<b> Задача №1.</b> <br>
+Получить в переменную элемент с атрибутом data-say-hi
+ и прочитать значение этого атрибута
+<div data-say-hi="yes">Привет!</div>
+let dataNew = document.query <br>
+
+<mark>let newDate =document.querySelector('[data-say-hi]'); <br>
+   console.log(newDate);</mark>
+
+<b> Задача №3.</b> <br>
+ Получить в переменную элемент с текстом Йончи
+<ul>
+	<li>Корчи</li>
+	<li>Йончи</li>
+</ul>
+<mark> 
+   let ionchi =document.querySelector('ul'); <br>
+console.log(ionchi);<br>
+let end = ionchi.lastElementChild;;<br>
+console.log(end)<br>
+</mark><br>
+
+<b>Задача №3.</b> <br>
+Получить в переменную коллекцию элементов с классом like <br>
+<div class="like"></div>
+<div class="subscribe"></div>
+<div class="like subscribe"></div> <br>
+<mark>
+   let  likes =document.querySelectorAll('.like'); 
+
+</mark>
+
+Задача №4.
+Куда добавится <li>Текст</li> ? <br>
+
+// JS
+const list = document.querySelectorAll('ul');
+list.insertAdjacentHTML(
+	'beforeend',
+	'<li>Текст</li>'
+);<br>
+
+// HTML
+<ul>
+	<li>Пункт №1</li>
+	<li>Пункт №2</li>
+</ul><br>
+<mark>в середину-в кінець</mark>
+ <h2>Відео 4 (scroll)</h2>
+ <b>Задача №1. <br>
+Узнать ширину полосы прокрутки</b>
+<mark>
+   const windWidthWithScroll = window.innerWidth; <br>
+   console.log(windWidthWithScroll);<br>
+
+   const element = document.documentElement;<br>
+   const windWidthWithouthScroll = element.clientWidth;<br>
+   console.log(windWidthWithouthScroll);<br>
+   const widthScroll = windWidthWithScroll - windWidthWithouthScroll;<br>
+   console.log(`Ширина полоси прокрутки ${widthScroll}px`)</mark>
+<b> <br>
+   <b>Задача №2. <br>
+   Заставьте браузер прокрутиться на 100px сверху
+   спустя секунду после открытия страницы</b> <br>
+ </b>
+ <mark>
+   function scrollWindow() { <br>
+      window.scrollBy(0, 100); <br>
+    }<br>
+    setTimeout(scrollWindow, 1000);<br>
+ </mark>
+
+
+<b>Задача №3.  <br>
+Получите координаты любых трех элементов на странице</b> <br>
+<b>Координати  обєктiv - код в js 66-89 рядок </b>  <br>
+
+
+
+<div class="column"></div>
+
+
+<script src="js/js.js"></script>
+</body>
+</html>
